@@ -1,4 +1,4 @@
-package model;
+package com.ActividadJPA.proyecto.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
