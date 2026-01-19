@@ -1,4 +1,4 @@
-package com.actividadJPA.proyecto.service;
+package com.ActividadJPA.proyecto.service;
 
 import java.util.List;
 import com.ActividadJPA.proyecto.model.Producto;

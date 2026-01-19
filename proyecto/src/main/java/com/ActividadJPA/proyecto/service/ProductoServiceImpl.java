@@ -1,9 +1,9 @@
-package com.actividadJPA.proyecto.service;
+package com.ActividadJPA.proyecto.service;
 
 import org.springframework.stereotype.Service;
 
 import com.ActividadJPA.proyecto.model.Producto;
-import com.actividadJPA.proyecto.repository.ProductoRepository;
+import com.ActividadJPA.proyecto.repository.ProductoRepository;
 
 import java.util.List;
 
