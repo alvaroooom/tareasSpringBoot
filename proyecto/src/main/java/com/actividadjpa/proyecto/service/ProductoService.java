@@ -1,7 +1,8 @@
-package com.ActividadJPA.proyecto.service;
+package com.actividadjpa.proyecto.service;
 
 import java.util.List;
-import com.ActividadJPA.proyecto.model.Producto;
+
+import com.actividadjpa.proyecto.model.Producto;
 
 public interface ProductoService {
 

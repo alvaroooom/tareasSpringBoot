@@ -1,4 +1,4 @@
-package com.ActividadJPA.proyecto.controller;
+package com.actividadjpa.proyecto.controller;
 
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import com.ActividadJPA.proyecto.model.Producto;
-import com.ActividadJPA.proyecto.service.ProductoService;
+import com.actividadjpa.proyecto.model.Producto;
+import com.actividadjpa.proyecto.service.ProductoService;
 
 @Controller
 @RequestMapping("/productos")
