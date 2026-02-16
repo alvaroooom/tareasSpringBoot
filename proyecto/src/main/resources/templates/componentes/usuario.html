@@ -1,0 +1,12 @@
+<div th:fragment="usuario" class="container mt-3">
+    <div class="alert alert-light border d-flex align-items-center justify-content-center gap-2 shadow-sm">
+        <span class="fw-semibold">
+            Bienvenido al panel de control, 
+            <span th:if="${#authentication != null and #authentication.name != 'anonymousUser'}" 
+                  class="text-primary" 
+                  th:text="${#authentication.name}">Usuario</span>
+            <span th:unless="${#authentication != null and #authentication.name != 'anonymousUser'}" 
+                  class="text-secondary">Invitado</span>
+        </span>
+    </div>
+</div>

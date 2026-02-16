@@ -1,0 +1,16 @@
+<div th:fragment="logout">
+    <form th:if="${#authentication != null and #authentication.name != 'anonymousUser'}"
+          th:action="@{/logout}"
+          method="post"
+          class="d-inline">
+        <button type="submit" class="btn btn-outline-danger btn-sm mx-2">
+            Cerrar sesión
+        </button>
+    </form>
+    
+    <a th:unless="${#authentication != null and #authentication.name != 'anonymousUser'}"
+       th:href="@{/login}"
+       class="btn btn-outline-primary btn-sm mx-2">
+        Iniciar sesión
+    </a>
+</div>

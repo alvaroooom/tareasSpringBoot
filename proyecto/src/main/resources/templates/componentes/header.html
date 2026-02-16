@@ -1,0 +1,39 @@
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" th:href="@{/inicio}">
+                Gestión de Productos
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/productos}">Productos</a>
+                    </li>
+                    <li th:if="${#authorization.expression('hasAnyRole(''MANAGER'',''ADMIN'')')}">
+                        <a class="nav-link" th:href="@{/usuarios}">Usuarios</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item" th:if="${#authentication != null and #authentication.name != 'anonymousUser'}">
+                        <span class="nav-link fw-semibold text-light">
+                            Hola, <span th:text="${#authentication.name}">Usuario</span>
+                        </span>
+                    </li>
+                    <li class="nav-item" th:unless="${#authentication != null and #authentication.name != 'anonymousUser'}">
+                        <span class="nav-link text-secondary">Invitado</span>
+                    </li>
+
+                    <li class="nav-item">
+                        <div th:replace="~{componentes/logout :: logout}"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
